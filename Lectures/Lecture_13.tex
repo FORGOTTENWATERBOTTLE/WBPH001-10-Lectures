@@ -60,10 +60,17 @@ We also showed that the transformation to a frame comoving with the particle doe
 \be
 F_x = F_x'\;\;\;\;\;{\rm and}\;\;\;\;\ F_y = \gamma^{-1}F_y'.
 \ee
-The force in the transverse direction is thus larger by a factor $\gamma$ in the particle's frame. Again, we can always define a coordinate system for which the following transformation rules apply. If we consider a frame that is not the particle's rest frame (but $S''$), we just apply the transformation rules twice:
+The force in the transverse direction is thus larger by a factor $\gamma$ in the particle's instantaneous rest frame. The following shortcut applies only to \emph{collinear} boosts: choose the $x$ axis along the particle's instantaneous velocity in $S$, and let $S''$ also be related to $S$ by a boost along $x$ (but not necessarily the boost that makes the particle rest). The particle then still has instantaneous motion only along $x$ in $S''$.
+
+To relate $S$ and $S''$, it is useful to pass through the instantaneous rest frame $R$ of the particle. From the transformation above, the transverse force in that rest frame is
+\be
+F_y^{R}=\gamma F_y,
+\ee
+where $\gamma$ is the Lorentz factor of the particle as measured in $S$. If the particle has Lorentz factor $\gamma''$ in $S''$, applying the same relation between $S''$ and $R$ gives $F_y^{R}=\gamma''F_y''$. Equating these two expressions gives
 \be
 F_x'' = F_x\;\;\;\;\;{\rm and}\;\;\;\;\ \gamma''F_y'' = \gamma F_y.
 \ee
+Thus $F_x$ is unchanged by collinear boosts, whereas the transverse component changes because the particle has a different Lorentz factor in the two frames. If the new frame has a boost with a transverse component, the particle no longer has instantaneous motion only along $x$; these simple component rules cannot be used. In that case, transform the four-force and then recover the three-force components in the new frame.
 
 Finally, we considered an example of where the mass of a system changes continuously. These examples are generally labeled as rocket motion. We adopted the example that we considered in lecture 9, where an engine on a rocket expels fuel to propel forward, and replaced the fuel with photons. The main goal was to obtain an expression for the final mass of the rocket, given some velocity $v_{\rm max}$. While the final expression deviates from the expression we derived in lecture 9, we showed that in the non-relativistic limit $v\ll c$, both results agree to second order in $v_{\rm max}$. 
 
@@ -272,7 +279,7 @@ As we will see, by construction, Lorentz transformations are operations other th
 \vspace{2em}
 
 \noindent 
-{\bf Velocity 4-vector}: We could imagine a velocity 4-vector made up of the spacetime interval 4-vector $dS = (dt, dx,dy,dz)$ and dividing this by the proper time, i.e., $V = \frac{dS}{d\tau}$.  Since $d\tau$ is frame independent (it does not change when moving frames), we know that $V$ should be a 4-vector (since $dS$ is a 4-vector). For constant speed we have $d\tau = \sqrt{1-v^2}dt = \gamma^{-1} dt$ (lecture 4) and we can thus write:
+{\bf Velocity 4-vector}: We could imagine a velocity 4-vector made up of the spacetime interval 4-vector $dS = (dt, dx,dy,dz)$ and dividing this by the proper time, i.e., $V = \frac{dS}{d\tau}$.  Since $d\tau$ is frame independent (it does not change when moving frames), we know that $V$ should be a 4-vector (since $dS$ is a 4-vector). For an infinitesimal segment of any timelike worldline, we have the exact local relation $d\tau = \sqrt{1-v^2}\,dt = \gamma^{-1}dt$ (lecture 4), where $v$ and $\gamma$ are instantaneous quantities. Thus we can write:
 \be
 V = \frac{dS}{d\tau} = \gamma\left(1, \frac{dx}{dt}, \frac{dy}{dt}, \frac{dz}{dt}\right) = (\gamma, \gamma {\bf v}).
 \ee
@@ -280,7 +287,7 @@ This is referred to as the velocity 4-vector. In the rest frame of an object, we
 \be
 V\cdot V \equiv \eta_{\mu \nu} V^{\mu} V^{\nu} = \gamma^2(1-{\bf v} \cdot {\bf v}) = 1, 
 \ee
-as it should, since $V^2 = dS^2/d\tau^2 = 1$. 
+as it should, since $V^2 = dS^2/d\tau^2 = 1$. If the speed is constant over a finite interval, the local relation can be integrated to give $\Delta\tau=\gamma^{-1}\Delta t$. For changing speed, instead $\Delta\tau=\int \gamma(t)^{-1}dt$.
 
 \vspace{2em}
 
