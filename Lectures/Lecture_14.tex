@@ -83,9 +83,27 @@ This is equivalent to the transformation rules we derived in lectures 10 and 11.
 Since $E$ and $\bf p$ are part of the same 4-vector, if one of the two is conserved in every frame in a collision, then so is the other. To see this, you can consider the 4-momentum change 4-vector $\Delta P \equiv P_{\rm after}-P_{\rm before}$. If, e.g., $E$ is conserved in every frame, then $\Delta P_0 = 0$ in every frame. By virtue of one of the theorems discussed in the previous lecture, we know that the other component should be zero, and hence ${\bf p}$ should also be conserved in every frame. 
 
 \section{Force and Acceleration}\label{sec:F&A}
-We will assume $m$ is constant and does not depend on time. Recall the 4-force in an instantaneous inertial frame $S'$ where $v' = 0$:
+We will assume $m$ is constant and does not depend on time.
 \be
-F'  = \gamma\left( \frac{dE'}{dt}, {\bf F}' \right) = (0,{\bf F}').
+P\cdot P=E^2-{\bf p}^2=m^2.
+\ee
+Differentiating with respect to coordinate time gives
+\be
+2E\frac{dE}{dt}-2{\bf p}\cdot\frac{d{\bf p}}{dt}=0.
+\ee
+Therefore,
+\be
+\frac{dE}{dt}=\frac{\bf p}{E}\cdot{\bf F}={\bf v}\cdot{\bf F},
+\ee
+where $\mathbf F=d\mathbf p/dt$ and $\mathbf p/E=\mathbf v$. Hence
+\be
+F=\frac{dP}{d\tau}
+=\gamma\left(\frac{dE}{dt},\mathbf F\right)
+=\gamma\left(\mathbf v\cdot\mathbf F,\mathbf F\right).
+\ee
+This is a derived relation, not an additional assumption. In the instantaneous inertial frame $S'$, $\mathbf v'=0$, so $dE'/dt'=0$ and therefore
+\be
+F'=(0,\mathbf F').
 \ee
 Next, consider another frame $S$, in which the particle moves with velocity $v$ ($=\beta$) in the $x$ direction. Since $F'$ is a 4-vector, it transforms according to the Lorentz transformations:
 \be
@@ -169,7 +187,7 @@ From Eq.~\eqref{eq:a4v}, we then find
 A = (0,0,\gamma^2 v^2/r,0).
 \ee
 
-To obtain the coordinates in the $S'$ frame, we use that the components of $A$ are related to the components of $A'$ through a Lorentz transformation in the $x$ direction. This means that the $A_2 = A_2'$ (and all the other components that are zero remain zero). Thus, we have:
+To obtain the components in the $S'$ frame, we use that the components of $A$ are related to the components of $A'$ through a Lorentz transformation in the $x$ direction. This means that the $A_2 = A_2'$ (and all the other components that are zero remain zero). Thus, we have:
 \be
 A' = (0,0,\gamma^2 v^2/r,0)
 \ee
@@ -197,12 +215,12 @@ There is nothing really new here. In Newtonian mechanics, we have ${\bf F} = m{\
 \ifshowboardquestion
 \section*{Board Question}
 \begin{tcolorbox}[colback=blue!5!white]
-A particle has four-momentum $p^\mu=mU^\mu$ and four-force $K^\mu=dp^\mu/d\tau$.
+A particle has four-momentum $P^\mu=mV^\mu$ and four-force $F^\mu=dP^\mu/d\tau$.
 \begin{enumerate}
-    \item Use $U^\mu U_\mu=c^2$ to show that $U_\mu K^\mu=0$.
-    \boardanswer{Differentiate $U^\mu U_\mu=c^2$ with respect to $\tau$: $2U_\mu\,dU^\mu/d\tau=0$. Since $K^\mu=m\,dU^\mu/d\tau$ for constant $m$, $U_\mu K^\mu=0$.}
+    \item Use $V^\mu V_\mu=c^2$ to show that $V_\mu F^\mu=0$.
+    \boardanswer{Differentiate $V^\mu V_\mu=c^2$ with respect to $\tau$: $2V_\mu\,dV^\mu/d\tau=0$. Since $F^\mu=m\,dV^\mu/d\tau$ for constant $m$, $V_\mu F^\mu=0$.}
     \item Interpret this orthogonality in the instantaneous rest frame of the particle.
-    \boardanswer{In the instantaneous rest frame, $U^\mu=(c,0,0,0)$, so orthogonality implies the time component of the four-force vanishes there.}
+    \boardanswer{In the instantaneous rest frame, $V^\mu=(c,0,0,0)$, so orthogonality implies the time component of the four-force vanishes there.}
     \item Explain why this result constrains the time component of the four-force.
     \boardanswer{The four-force cannot have an arbitrary component parallel to four-velocity; its time component is fixed by the spatial force and velocity.}
     \item Compare this with the Newtonian statement that force is parallel to acceleration.
