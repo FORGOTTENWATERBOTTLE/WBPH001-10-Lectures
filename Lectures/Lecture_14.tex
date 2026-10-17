@@ -128,6 +128,20 @@ F_z &=& F_z'/\gamma.
 \ee
 This is the same as we found in lecture 12, when we showed that the force in the longitudinal direction ($x$) remains the same, while the force along the transverse direction ($y,z$) is amplified by a factor $\gamma$ in the particle frame $S'$. 
 
+\paragraph{Why do longitudinal and transverse forces produce different accelerations?}
+At any event, \emph{longitudinal} means parallel to the particle's instantaneous velocity, and \emph{transverse} means perpendicular to it. Choose the $x$ axis along the instantaneous velocity, so that $\mathbf v=(v,0,0)$. The Lorentz factor depends on the \emph{speed} rather than on the direction of motion, and therefore
+\be
+\frac{d\gamma}{dt}=\gamma^3\mathbf v\cdot\mathbf a=\gamma^3va_x.
+\ee
+Thus a longitudinal acceleration changes the speed and hence $\gamma$, whereas a transverse acceleration only turns the velocity vector to first order. Differentiating the momentum components makes the distinction explicit:
+\be
+F_x&=&\frac{d(\gamma mv_x)}{dt}
+=m\gamma^3a_x,\nonumber\\
+F_y&=&\frac{d(\gamma mv_y)}{dt}
+=m\gamma a_y,\label{eq:force-components-explained}
+\ee
+where the term involving $d\gamma/dt$ in the second line vanishes at this event because $v_y=0$. This is the physical reason that a given transverse force produces a larger coordinate acceleration than an equally large longitudinal force when $\gamma>1$.
+
 The ratio of $F_y/F_x = \gamma^{-1}F_y'/F_x'$, i.e. the ratio of the forces decreases by a factor $\gamma$ when going from $S'$ to $S$ (hence the norm of the vector $(F_x, F_y)$ will decrease). 
 
 The first line combined with the second line tells us that $dE = F_x dx$, which is the work-energy result we derived in lecture 12 and is analogous to the result for classical motion in lecture 9. 
@@ -182,7 +196,7 @@ Thus we find $|{\bf a}| = a = v^2/r$. In the moment that the particle is crossin
 \be
 {\bf a} = (0, v^2/r,0).
 \ee
-From Eq.~\eqref{eq:a4v}, we then find 
+Substituting $\mathbf a=(0,v^2/r,0)$ into Eq.~\eqref{eq:a4v}, we find
 \be
 A = (0,0,\gamma^2 v^2/r,0).
 \ee
@@ -195,7 +209,8 @@ The 3 acceleration in $S'$, where $v'=0$ and $\gamma' = 1$, should be related to
 \be
 {\bf a}' = (0,\gamma^2 v^2/r,0).
 \ee
-This result is consistent with Eq.~\eqref{eq:AtoA'}. 
+This also follows from Eq.~\eqref{eq:AtoA'}: since $a_y=v^2/r$, it gives
+$a'_y=\gamma^2v^2/r$.
 
 \section{The form of physical laws}\label{sec:physics}
 
